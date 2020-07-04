@@ -1,5 +1,8 @@
 ﻿using System;
 using System.IO;
+using Microsoft.Azure;
+using Microsoft.Azure.Storage;
+using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.FileExtensions;
 using Microsoft.Extensions.Configuration.Json;
@@ -21,6 +24,15 @@ namespace BlobConsole
 
             string getConnString = config["connectionstring"];
             Console.WriteLine(getConnString);
+
+            CloudStorageAccount cuentaAlmacenamiento = CloudStorageAccount.Parse(config["connectionstring"]);
+            CloudBlobClient clientBlob = cuentaAlmacenamiento.CreateCloudBlobClient();
+            CloudBlobContainer contenedor = clientBlob.GetContainerReference("contenedorstoragefromdotnet");
+            contenedor.CreateIfNotExists();
+            contenedor.SetPermissions(new BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
+
+
+
         }
     }
 }

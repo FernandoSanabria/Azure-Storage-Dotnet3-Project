@@ -20,3 +20,7 @@
 /home/akasha/Desktop/AzureStorage/BlobConsole/obj/Debug/netcoreapp3.1/BlobConsole.dll
 /home/akasha/Desktop/AzureStorage/BlobConsole/obj/Debug/netcoreapp3.1/BlobConsole.pdb
 /home/akasha/Desktop/AzureStorage/BlobConsole/obj/Debug/netcoreapp3.1/BlobConsole.genruntimeconfig.cache
+/home/akasha/Desktop/AzureStorage/BlobConsole/bin/Debug/netcoreapp3.1/Microsoft.Azure.KeyVault.Core.dll
+/home/akasha/Desktop/AzureStorage/BlobConsole/bin/Debug/netcoreapp3.1/Microsoft.Azure.Storage.Blob.dll
+/home/akasha/Desktop/AzureStorage/BlobConsole/bin/Debug/netcoreapp3.1/Microsoft.Azure.Storage.Common.dll
+/home/akasha/Desktop/AzureStorage/BlobConsole/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll

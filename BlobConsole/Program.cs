@@ -31,7 +31,15 @@ namespace BlobConsole
             contenedor.CreateIfNotExists();
             contenedor.SetPermissions(new BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
 
+            CloudBlockBlob myImageBlobReference = contenedor.GetBlockBlobReference("imageuploadedfromdotnet.png");
 
+            using ( var fileStream = System.IO.File.OpenRead(@"imageuploadedfromdotnet.png"))
+            {
+                myImageBlobReference.UploadFromStream(fileStream);
+            }
+
+            Console.WriteLine("It's done");
+            Console.ReadLine();
 
         }
     }

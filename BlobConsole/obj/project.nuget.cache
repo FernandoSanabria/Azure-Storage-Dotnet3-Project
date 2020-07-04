@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "WZtRlALqJnATosHve37OyLkANbpqVLle7fmUNeQ/QOR7QupG5l8PqfyxUSziWFd4z7fsh2GJ2fuFton3rPjbeQ==",
+  "success": true,
+  "projectFilePath": "/home/akasha/Desktop/AzureStorage/BlobConsole/BlobConsole.csproj",
+  "expectedPackageFiles": [
+    "/home/akasha/.nuget/packages/microsoft.extensions.configuration/3.1.3/microsoft.extensions.configuration.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.3/microsoft.extensions.configuration.abstractions.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.configuration.fileextensions/3.1.3/microsoft.extensions.configuration.fileextensions.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.configuration.json/3.1.3/microsoft.extensions.configuration.json.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.fileproviders.abstractions/3.1.3/microsoft.extensions.fileproviders.abstractions.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.fileproviders.physical/3.1.3/microsoft.extensions.fileproviders.physical.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.filesystemglobbing/3.1.3/microsoft.extensions.filesystemglobbing.3.1.3.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.extensions.primitives/3.1.3/microsoft.extensions.primitives.3.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -18,12 +18,24 @@ namespace TableConsole
             .AddJsonFile("appsettings.json")
             .Build();
 
-            string getConnString = config["connectionstring"];
+            CreateTableAsync("testingTable", config["connectionstring"]).Wait();
+            Console.WriteLine("it's done");
+
         }
 
         private static async Task<CloudTable> CreateTableAsync(string tableName, string connectionString)
         {
-
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
+                CloudTableClient tableClient = storageAccount.CreateCloudTableClient(new TableClientConfiguration());
+                CloudTable table = tableClient.GetTableReference(tableName);
+                if(await table.CreateIfNotExistsAsync())
+                {
+                    Console.WriteLine("Table {0} created sucessfully", tableName);
+                } else {
+                    Console.WriteLine("Table {0} exists", tableName);
+                }
+                Console.WriteLine("async is done");
+                return table;
         }
     }
 }

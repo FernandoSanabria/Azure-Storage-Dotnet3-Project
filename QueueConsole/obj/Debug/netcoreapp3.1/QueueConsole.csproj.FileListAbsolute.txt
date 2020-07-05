@@ -24,3 +24,4 @@
 /home/akasha/Desktop/AzureStorage/QueueConsole/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
 /home/akasha/Desktop/AzureStorage/QueueConsole/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
 /home/akasha/Desktop/AzureStorage/QueueConsole/obj/Debug/netcoreapp3.1/QueueConsole.csproj.CopyComplete
+/home/akasha/Desktop/AzureStorage/QueueConsole/bin/Debug/netcoreapp3.1/Microsoft.Azure.Storage.Blob.dll

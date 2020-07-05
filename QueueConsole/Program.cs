@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Queue;
+using Microsoft.Azure.Storage.Blob;
 
 namespace QueueConsole
 {
@@ -23,17 +24,45 @@ namespace QueueConsole
             CloudQueueClient queueClient = myClient.CreateCloudQueueClient();
 
             CloudQueue queue = queueClient.GetQueueReference("filaprocesos");
-            queue.CreateIfNotExists();
+            // queue.CreateIfNotExists();
 
-            for (int i = 0; i < 500; i++)
+            // for (int i = 0; i < 500; i++)
+            // {
+            //     CloudQueueMessage message = new CloudQueueMessage(string.Format("Operacion: {0}", i));
+            //     queue.AddMessage(message);
+
+            //     Console.WriteLine(i.ToString() + " Mensaje publicado");
+            // }
+            // Console.ReadLine();
+
+            CloudQueueMessage peekedMessage = queue.PeekMessage();
+
+            CloudBlobClient blobClient = myClient.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClient.GetContainerReference("contenedorqueues");
+            container.CreateIfNotExists();
+
+
+            foreach (CloudQueueMessage item in queue.GetMessages(20, TimeSpan.FromSeconds(100)))
             {
-                CloudQueueMessage message = new CloudQueueMessage(string.Format("Operacion: {0}", i));
-                queue.AddMessage(message);
+                string filePath = string.Format(@"log{0}.txt", item.Id);
+                TextWriter tempFile = File.CreateText(filePath);
+                var message = queue.GetMessage().AsString;
+                tempFile.WriteLine(message);
+                Console.WriteLine("File created");
+                tempFile.Close();
 
-                Console.WriteLine(i.ToString() + " Mensaje publicado");
+
+                using (var fileStream = System.IO.File.OpenRead(filePath))
+                {
+                    CloudBlockBlob myBlob = container.GetBlockBlobReference(string.Format(@"log{0}.txt", item.Id));
+                    myBlob.UploadFromStream(fileStream);
+                    Console.WriteLine("Blob created");
+                }
+
+                queue.DeleteMessage(item);
+
             }
             Console.ReadLine();
-
         }
     }
 }

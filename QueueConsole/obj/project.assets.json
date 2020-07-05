@@ -15,6 +15,19 @@
           "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll": {}
         }
       },
+      "Microsoft.Azure.Storage.Blob/11.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Azure.Storage.Common": "11.1.3",
+          "NETStandard.Library": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll": {}
+        }
+      },
       "Microsoft.Azure.Storage.Common/11.1.3": {
         "type": "package",
         "dependencies": {
@@ -798,6 +811,23 @@
         "lib/netstandard1.5/Microsoft.Azure.KeyVault.Core.dll",
         "microsoft.azure.keyvault.core.2.0.4.nupkg.sha512",
         "microsoft.azure.keyvault.core.nuspec"
+      ]
+    },
+    "Microsoft.Azure.Storage.Blob/11.1.3": {
+      "sha512": "6SCGjjxI5tlqp8pEQ8k4zob+dYcOhq/RA+Q1mkIl2hDiVLBlpZLDgJAknFChOTkX5/GMfscvZYVE6Vmt5mYdfA==",
+      "type": "package",
+      "path": "microsoft.azure.storage.blob/11.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Azure.Storage.Blob.dll",
+        "lib/net452/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard1.3/Microsoft.Azure.Storage.Blob.xml",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.dll",
+        "lib/netstandard2.0/Microsoft.Azure.Storage.Blob.xml",
+        "microsoft.azure.storage.blob.11.1.3.nupkg.sha512",
+        "microsoft.azure.storage.blob.nuspec"
       ]
     },
     "Microsoft.Azure.Storage.Common/11.1.3": {
@@ -3462,6 +3492,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.Azure.Storage.Blob >= 11.1.3",
       "Microsoft.Azure.Storage.Queue >= 11.1.3",
       "Microsoft.Extensions.Configuration >= 3.1.3",
       "Microsoft.Extensions.Configuration.FileExtensions >= 3.1.3",
@@ -3507,6 +3538,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.Azure.Storage.Blob": {
+            "target": "Package",
+            "version": "[11.1.3, )"
+          },
           "Microsoft.Azure.Storage.Queue": {
             "target": "Package",
             "version": "[11.1.3, )"

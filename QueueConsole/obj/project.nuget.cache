@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s+sf6fLO/pdyeKndZdhBnt24bvbwLa6GIghZB9nziADte4EM56+QCWiYiiNcj5HA/nIPay8+0Ym9FmqwPSPVFw==",
+  "dgSpecHash": "epAX1S1VCa5tQU0fnCtp5A627SIcAbNqohsObl4HZjBhw5Bg9J9nQU012GKGW8b64+sNnHO9UkWHTY2gr32CXA==",
   "success": true,
   "projectFilePath": "/home/akasha/Desktop/AzureStorage/QueueConsole/QueueConsole.csproj",
   "expectedPackageFiles": [
     "/home/akasha/.nuget/packages/microsoft.azure.keyvault.core/2.0.4/microsoft.azure.keyvault.core.2.0.4.nupkg.sha512",
+    "/home/akasha/.nuget/packages/microsoft.azure.storage.blob/11.1.3/microsoft.azure.storage.blob.11.1.3.nupkg.sha512",
     "/home/akasha/.nuget/packages/microsoft.azure.storage.common/11.1.3/microsoft.azure.storage.common.11.1.3.nupkg.sha512",
     "/home/akasha/.nuget/packages/microsoft.azure.storage.queue/11.1.3/microsoft.azure.storage.queue.11.1.3.nupkg.sha512",
     "/usr/share/dotnet/sdk/NuGetFallbackFolder/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",

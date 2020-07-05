@@ -1,0 +1,13 @@
+/home/akasha/Desktop/AzureStorage/TableConsole/bin/Debug/netcoreapp3.1/TableConsole
+/home/akasha/Desktop/AzureStorage/TableConsole/bin/Debug/netcoreapp3.1/TableConsole.deps.json
+/home/akasha/Desktop/AzureStorage/TableConsole/bin/Debug/netcoreapp3.1/TableConsole.runtimeconfig.json
+/home/akasha/Desktop/AzureStorage/TableConsole/bin/Debug/netcoreapp3.1/TableConsole.runtimeconfig.dev.json
+/home/akasha/Desktop/AzureStorage/TableConsole/bin/Debug/netcoreapp3.1/TableConsole.dll
+/home/akasha/Desktop/AzureStorage/TableConsole/bin/Debug/netcoreapp3.1/TableConsole.pdb
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.csprojAssemblyReference.cache
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.AssemblyInfoInputs.cache
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.AssemblyInfo.cs
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.csproj.CoreCompileInputs.cache
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.dll
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.pdb
+/home/akasha/Desktop/AzureStorage/TableConsole/obj/Debug/netcoreapp3.1/TableConsole.genruntimeconfig.cache

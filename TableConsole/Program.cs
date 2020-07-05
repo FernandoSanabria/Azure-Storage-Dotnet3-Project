@@ -34,8 +34,29 @@ namespace TableConsole
                 } else {
                     Console.WriteLine("Table {0} exists", tableName);
                 }
+
+                await InsertOperationAsync(table);    
+
                 Console.WriteLine("async is done");
                 return table;
         }
+
+
+        private static async Task InsertOperationAsync(CloudTable table) 
+        {
+                Contacto contacto = new Contacto("Fer", "Stein")
+                {
+                    Email = "asd@fersa.com",
+                    Telefono = "4567890"
+                    
+                };
+
+                TableOperation insertOperation = TableOperation.InsertOrMerge(contacto);
+                TableResult result = await table.ExecuteAsync(insertOperation);
+                Contacto insertedContact = result.Result as Contacto;
+                Console.WriteLine("contact added");
+        }
+
+
     }
 }

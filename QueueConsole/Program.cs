@@ -21,6 +21,19 @@ namespace QueueConsole
 
             CloudStorageAccount myClient = CloudStorageAccount.Parse(config["connectionstring"]);
             CloudQueueClient queueClient = myClient.CreateCloudQueueClient();
+
+            CloudQueue queue = queueClient.GetQueueReference("filaprocesos");
+            queue.CreateIfNotExists();
+
+            for (int i = 0; i < 500; i++)
+            {
+                CloudQueueMessage message = new CloudQueueMessage(string.Format("Operacion: {0}", i));
+                queue.AddMessage(message);
+
+                Console.WriteLine(i.ToString() + " Mensaje publicado");
+            }
+            Console.ReadLine();
+
         }
     }
 }
